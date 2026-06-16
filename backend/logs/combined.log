@@ -9399,3 +9399,29 @@ Transaction API error: Transaction not found. Transaction ID is invalid, refers 
 [2026-06-16 16:36:23:3623] [INFO]: GET /api/users?productId=64108a7b-0d49-4004-94dd-64a1ee68ac1c 304 - - 4.562 ms
 [2026-06-16 16:36:23:3623] [INFO]: GET /api/products/64108a7b-0d49-4004-94dd-64a1ee68ac1c/status 304 - - 3.067 ms
 [2026-06-16 16:36:23:3623] [INFO]: GET /api/users?productId=64108a7b-0d49-4004-94dd-64a1ee68ac1c 304 - - 1.851 ms
+[2026-06-16 17:59:29:5929] [INFO]: [SOCKET] User disconnected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: gcWTZeU-OyVQVnd3AAAe
+[2026-06-16 17:59:29:5929] [INFO]: [SOCKET] User disconnected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: Uon1XPzg9KK7UPtwAAAf
+[2026-06-16 17:59:32:5932] [INFO]: OPTIONS /api/products 204 0 - 0.295 ms
+[2026-06-16 17:59:32:5932] [INFO]: GET /api/products 304 - - 20.896 ms
+[2026-06-16 17:59:32:5932] [INFO]: GET /api/products 304 - - 3.238 ms
+[2026-06-16 17:59:32:5932] [INFO]: [SOCKET] User connected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: yYO1h-ommQHJOyJJAAAi
+[2026-06-16 17:59:32:5932] [INFO]: [SOCKET] User connected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: efo-0_JZl-KrF5vBAAAj
+[2026-06-16 17:59:32:5932] [INFO]: OPTIONS /api/products/64108a7b-0d49-4004-94dd-64a1ee68ac1c/status 204 0 - 0.060 ms
+[2026-06-16 17:59:32:5932] [INFO]: GET /api/products/64108a7b-0d49-4004-94dd-64a1ee68ac1c/status 304 - - 4.977 ms
+[2026-06-16 17:59:32:5932] [INFO]: OPTIONS /api/users?productId=64108a7b-0d49-4004-94dd-64a1ee68ac1c 204 0 - 0.065 ms
+[2026-06-16 17:59:32:5932] [INFO]: GET /api/users?productId=64108a7b-0d49-4004-94dd-64a1ee68ac1c 304 - - 6.383 ms
+[2026-06-16 17:59:32:5932] [INFO]: GET /api/products/64108a7b-0d49-4004-94dd-64a1ee68ac1c/status 304 - - 3.495 ms
+[2026-06-16 17:59:32:5932] [INFO]: GET /api/users?productId=64108a7b-0d49-4004-94dd-64a1ee68ac1c 304 - - 3.018 ms
+[2026-06-16 18:21:39:2139] [INFO]: [SOCKET] User disconnected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: yYO1h-ommQHJOyJJAAAi
+[2026-06-16 18:21:39:2139] [INFO]: [SOCKET] User disconnected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: efo-0_JZl-KrF5vBAAAj
+[2026-06-16 18:21:40:2140] [INFO]: OPTIONS /api/products 204 0 - 0.081 ms
+[2026-06-16 18:21:40:2140] [INFO]: GET /api/products 304 - - 18.132 ms
+[2026-06-16 18:21:40:2140] [INFO]: GET /api/products 304 - - 2.348 ms
+[2026-06-16 18:21:40:2140] [INFO]: [SOCKET] User connected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: MAOsUsSNezgzLlBbAAAm
+[2026-06-16 18:21:40:2140] [INFO]: [SOCKET] User connected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: 8Q9UI903NzMAGXX5AAAn
+[2026-06-16 18:21:40:2140] [INFO]: OPTIONS /api/products/64108a7b-0d49-4004-94dd-64a1ee68ac1c/status 204 0 - 0.055 ms
+[2026-06-16 18:21:40:2140] [INFO]: GET /api/products/64108a7b-0d49-4004-94dd-64a1ee68ac1c/status 304 - - 6.682 ms
+[2026-06-16 18:21:40:2140] [INFO]: OPTIONS /api/users?productId=64108a7b-0d49-4004-94dd-64a1ee68ac1c 204 0 - 0.045 ms
+[2026-06-16 18:21:40:2140] [INFO]: GET /api/users?productId=64108a7b-0d49-4004-94dd-64a1ee68ac1c 304 - - 9.607 ms
+[2026-06-16 18:21:40:2140] [INFO]: GET /api/users?productId=64108a7b-0d49-4004-94dd-64a1ee68ac1c 304 - - 4.076 ms
+[2026-06-16 18:21:40:2140] [INFO]: GET /api/products/64108a7b-0d49-4004-94dd-64a1ee68ac1c/status 304 - - 31.010 ms
