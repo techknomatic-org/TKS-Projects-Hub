@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: tks-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "Sai@1234"
+      MYSQL_DATABASE: tks_tracking
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pSai@1234"]
+      timeout: 10s
+      retries: 5
+      interval: 5s
+
+  backend:
+    build:
+      context: ./backend
+    container_name: tks-backend
+    restart: always
+    environment:
+      PORT: 5000
+      DATABASE_URL: "mysql://root:Sai%401234@db:3306/tks_tracking"
+      JWT_SECRET: "tks_jwt_secret_key_change_me_in_prod"
+      AZURE_CLIENT_ID: "a667ed28-9786-4ada-964e-604da9fdcccd"
+      AZURE_TENANT_ID: "e27ea0e3-d544-492a-bdfc-778865bdeeae"
+      BYPASS_MICROSOFT_AUTH: "false"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        - VITE_API_URL=/api
+        - VITE_AZURE_CLIENT_ID=a667ed28-9786-4ada-964e-604da9fdcccd
+        - VITE_AZURE_TENANT_ID=e27ea0e3-d544-492a-bdfc-778865bdeeae
+        - VITE_AZURE_REDIRECT_URI=http://localhost/auth/microsoft/callback
+        - VITE_BYPASS_MICROSOFT_AUTH=false
+        - VITE_SOCKET_URL=/
+    container_name: tks-frontend
+    restart: always
+    depends_on:
+      - backend
+
+  nginx:
+    image: nginx:alpine
+    container_name: tks-nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - frontend
+      - backend
+
+volumes:
+  mysql_data:

@@ -1,0 +1,240 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  EMPLOYEE
+  ADMIN
+  BOTH
+}
+
+enum Status {
+  TODO
+  IN_PROGRESS
+  IN_REVIEW
+  TESTING
+  BLOCKED
+  READY_FOR_RELEASE
+  DONE
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+model User {
+  id              String          @id @default(uuid())
+  name            String
+  email           String          @unique
+  role            Role
+  profileImage    String?         @db.Text
+  isActive        Boolean         @default(true)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  
+  taggedProducts  Product[]       @relation("UserTaggedProducts")
+
+  productStatuses ProductStatus[]
+  features        Feature[]       @relation("UserFeatures")
+  userStories     UserStory[]     @relation("UserStories")
+  auditLogs       AuditLog[]      @relation("UserAuditLogs")
+  notifications   Notification[]  @relation("UserNotifications")
+
+  @@map("users")
+}
+
+model Product {
+  id          String          @id @default(uuid())
+  name        String
+  description String?         @db.Text
+
+  statuses                ProductStatus[]
+  features                Feature[]
+  userStories             UserStory[]
+  functionalRequirements  FunctionalRequirement[]
+  taggedUsers             User[]          @relation("UserTaggedProducts")
+
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  @@map("products")
+}
+
+model ProductStatus {
+  id          String    @id @default(uuid())
+  
+  productId   String
+  product     Product   @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  title       String
+  description String?   @db.Text
+
+  status      Status
+  priority    Priority
+
+  ownerId     String
+  owner       User      @relation(fields: [ownerId], references: [id])
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("product_statuses")
+}
+
+enum FeatureStatus {
+  PLANNED
+  IN_PROGRESS
+  COMPLETED
+  ON_HOLD
+}
+
+model Feature {
+  id             String        @id @default(uuid())
+
+  productId      String
+  product        Product       @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  title          String
+  description    String?       @db.Text
+
+  priority       Priority
+  status         FeatureStatus
+
+  ownerId        String
+  owner          User          @relation("UserFeatures", fields: [ownerId], references: [id])
+
+  releaseVersion String?
+
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  @@map("features")
+}
+
+enum StoryStatus {
+  BACKLOG
+  READY
+  IN_PROGRESS
+  TESTING
+  DONE
+}
+
+model UserStory {
+  id            String      @id @default(uuid())
+
+  productId     String
+  product       Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  title         String
+  description   String?     @db.Text
+
+  priority      Priority
+  status        StoryStatus
+
+  storyPoints   Int
+  sprint        String?
+
+  ownerId       String
+  owner         User        @relation("UserStories", fields: [ownerId], references: [id])
+
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  requirementMappings UserStoryRequirementMapping[]
+
+  @@map("user_stories")
+}
+
+enum EntityType {
+  STATUS
+  FEATURE
+  USER_STORY
+  REQUIREMENTS_MAPPING
+  FUNCTIONAL_REQUIREMENT
+}
+
+enum AuditAction {
+  CREATE
+  UPDATE
+  DELETE
+}
+
+model AuditLog {
+  id           String      @id @default(uuid())
+
+  userId       String
+  user         User        @relation("UserAuditLogs", fields: [userId], references: [id])
+
+  entityType   EntityType
+  entityId     String
+  action       AuditAction
+
+  oldValue     Json?
+  newValue     Json?
+
+  createdAt    DateTime    @default(now())
+
+  @@map("audit_logs")
+}
+
+enum NotificationType {
+  STATUS
+  FEATURE
+  USER_STORY
+  RELEASE
+  SYSTEM
+}
+
+model Notification {
+  id          String           @id @default(uuid())
+  userId      String
+  user        User             @relation("UserNotifications", fields: [userId], references: [id], onDelete: Cascade)
+  title       String
+  message     String
+  type        NotificationType
+  isRead      Boolean          @default(false)
+  entityId    String?
+  entityType  EntityType?
+  createdAt   DateTime         @default(now())
+
+  @@map("notifications")
+}
+
+model FunctionalRequirement {
+  id          String    @id @default(uuid())
+  reqId       String    @map("req_id")
+  title       String
+  description String?   @db.Text
+  productId   String    @map("product_id")
+  product     Product   @relation(fields: [productId], references: [id], onDelete: Cascade)
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  mappings    UserStoryRequirementMapping[]
+
+  @@unique([productId, reqId])
+  @@map("functional_requirements")
+}
+
+model UserStoryRequirementMapping {
+  id                      String                @id @default(uuid()) @map("mapping_id")
+  userStoryId            String                @map("user_story_id")
+  functionalRequirementId String                @map("functional_requirement_id")
+  createdAt               DateTime              @default(now()) @map("created_at")
+
+  userStory               UserStory             @relation(fields: [userStoryId], references: [id], onDelete: Cascade)
+  functionalRequirement   FunctionalRequirement @relation(fields: [functionalRequirementId], references: [id], onDelete: Cascade)
+
+  @@unique([userStoryId, functionalRequirementId])
+  @@map("user_story_requirement_mappings")
+}
+
+
