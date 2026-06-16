@@ -9425,3 +9425,15 @@ Transaction API error: Transaction not found. Transaction ID is invalid, refers 
 [2026-06-16 18:21:40:2140] [INFO]: GET /api/users?productId=64108a7b-0d49-4004-94dd-64a1ee68ac1c 304 - - 9.607 ms
 [2026-06-16 18:21:40:2140] [INFO]: GET /api/users?productId=64108a7b-0d49-4004-94dd-64a1ee68ac1c 304 - - 4.076 ms
 [2026-06-16 18:21:40:2140] [INFO]: GET /api/products/64108a7b-0d49-4004-94dd-64a1ee68ac1c/status 304 - - 31.010 ms
+[2026-06-16 18:26:02:262] [INFO]: ==================================================
+[2026-06-16 18:26:02:262] [INFO]: 🚀 TKS API Server with Socket.IO is running on port: 5000
+[2026-06-16 18:26:02:262] [INFO]: 🔐 Bypass MS Auth status: true
+[2026-06-16 18:26:02:262] [INFO]: ==================================================
+[2026-06-16 18:26:03:263] [INFO]: [SOCKET] User connected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: y4ROzfbqDVABZdduAAAB
+[2026-06-16 18:26:04:264] [INFO]: [SOCKET] User connected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: wnL1Zk1iktER8NBFAAAD
+[2026-06-16 18:26:10:2610] [INFO]: ==================================================
+[2026-06-16 18:26:10:2610] [INFO]: 🚀 TKS API Server with Socket.IO is running on port: 5000
+[2026-06-16 18:26:10:2610] [INFO]: 🔐 Bypass MS Auth status: true
+[2026-06-16 18:26:10:2610] [INFO]: ==================================================
+[2026-06-16 18:26:11:2611] [INFO]: [SOCKET] User connected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: er6vOIwT582aupeGAAAB
+[2026-06-16 18:26:12:2612] [INFO]: [SOCKET] User connected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: UfHvIpA6zX7gRQJNAAAD
