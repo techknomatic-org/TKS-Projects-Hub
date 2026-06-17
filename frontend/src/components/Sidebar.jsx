@@ -21,17 +21,7 @@ const Sidebar = ({ activeTab, setActiveTab, isOpen, setIsOpen }) => {
 
   const handleLogout = () => {
     authService.logout();
-
-    // Check if MSAL is initialized and can log out
-    if (instance) {
-      instance.logoutRedirect({ postLogoutRedirectUri: window.location.origin + '/login' })
-        .catch(err => {
-          console.error('Logout redirect failed:', err);
-          navigate('/login');
-        });
-    } else {
-      navigate('/login');
-    }
+    navigate('/login');
   };
 
   const menuItems = [

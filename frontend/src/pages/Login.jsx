@@ -139,9 +139,9 @@ const Login = () => {
     setIsAccessDenied(false);
     setAccessDeniedEmail('');
     setErrorMsg('');
-    // Clean up MSAL account session on access denial so they can retry
+    // Clean up local session on access denial so they can retry
     authService.logout();
-    instance.logoutRedirect({ postLogoutRedirectUri: window.location.origin + '/login' });
+    navigate('/login');
   };
 
   // Access Denied Screen Overlay

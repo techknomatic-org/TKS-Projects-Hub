@@ -51,15 +51,7 @@ const Header = ({ setActiveTab, sidebarOpen, setSidebarOpen }) => {
   const handleLogout = () => {
     authService.logout();
     socketService.disconnect();
-    if (instance) {
-      instance.logoutRedirect({ postLogoutRedirectUri: window.location.origin + '/login' })
-        .catch(err => {
-          console.error('Logout redirect failed:', err);
-          navigate('/login');
-        });
-    } else {
-      navigate('/login');
-    }
+    navigate('/login');
   };
 
   const getInitials = (name) => {
