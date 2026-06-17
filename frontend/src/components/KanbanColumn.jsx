@@ -106,7 +106,7 @@ const KanbanColumn = ({
       </Droppable>
 
       {/* "+ Add Item" placeholder row at the bottom of the column */}
-      {(isAdmin || (isEmployee && statusKey === 'TODO')) && (
+      {statusKey === 'TODO' && (isAdmin || isEmployee) && (
         <div className="mt-2 border-t border-dashed border-slate-200/60 pt-2 px-1">
           <button
             onClick={() => {
