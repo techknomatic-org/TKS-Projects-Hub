@@ -227,15 +227,6 @@ export const UserStoryList = ({ selectedProduct, userRole }) => {
         </div>
 
         <div className="flex items-center gap-3 self-end sm:self-auto">
-          {/* Export Button */}
-          <button
-            onClick={handleExportExcel}
-            className="flex items-center gap-2 px-4 py-2.5 bg-white border border-slate-200 hover:border-slate-300 rounded-xl text-slate-600 font-bold text-sm shadow-sm hover:shadow transition-all cursor-pointer"
-          >
-            <Download className="w-4 h-4 text-slate-400" />
-            Export List
-          </button>
-
           {/* Import Excel Button (Admins only) */}
           {canImportExcel && (
             <div className="flex items-center gap-2">

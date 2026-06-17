@@ -184,34 +184,6 @@ export const AuditLogList = () => {
           >
             <RefreshCw className="w-4 h-4" />
           </button>
-
-          {/* Export Dropdown Menu */}
-          <div className="relative" ref={exportMenuRef}>
-            <button
-              onClick={() => setShowExportMenu(!showExportMenu)}
-              className="flex items-center gap-2 px-4 py-2.5 bg-white border border-slate-200 hover:border-slate-300 rounded-xl text-slate-600 font-bold text-sm shadow-sm hover:shadow transition-all cursor-pointer"
-            >
-              <Download className="w-4 h-4 text-slate-400" />
-              Export Logs
-            </button>
-
-            {showExportMenu && (
-              <div className="absolute right-0 mt-2 w-48 bg-white border border-slate-100 rounded-2xl shadow-xl py-2 z-20 animate-in fade-in slide-in-from-top-2 duration-150">
-                <button
-                  onClick={handleExportCSV}
-                  className="w-full text-left px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors cursor-pointer"
-                >
-                  Export to CSV
-                </button>
-                <button
-                  onClick={handleExportExcel}
-                  className="w-full text-left px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors cursor-pointer"
-                >
-                  Export to Excel (.xlsx)
-                </button>
-              </div>
-            )}
-          </div>
         </div>
       </div>
 

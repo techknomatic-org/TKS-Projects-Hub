@@ -143,16 +143,6 @@ const ProductSelector = ({
             </div>
           </div>
         </div>
-
-        {/* Export Action on Right */}
-        <button
-          onClick={handleExport}
-          disabled={loading || !selectedProduct}
-          className="flex items-center gap-1.5 py-2 px-4 border border-slate-200 hover:border-slate-300 bg-white hover:bg-slate-50 rounded-xl font-bold text-slate-700 text-xs shadow-xs transition-all duration-150 shrink-0 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed justify-center font-sans"
-        >
-          <Download className="w-3.5 h-3.5 text-slate-500" />
-          <span>Export</span>
-        </button>
       </div>
 
       {/* New Product Modal overlay */}
