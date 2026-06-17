@@ -170,34 +170,6 @@ const KanbanBoard = ({ selectedProduct }) => {
           </p>
         </div>
 
-        {/* Info Badges (Read-Only indicator) */}
-        <div className="flex items-center gap-3">
-          {user?.role === 'BOTH' ? (
-            <div className="flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-purple-50 border border-purple-100 text-purple-600 text-[10px] font-bold uppercase tracking-wider animate-pulse">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Workspace Admin & Dev (Full Access)</span>
-            </div>
-          ) : isAdmin ? (
-            <div className="flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-600 text-[10px] font-bold uppercase tracking-wider animate-pulse">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Workspace Administrator (Full Access)</span>
-            </div>
-          ) : (
-            <div className="flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-amber-50 border border-amber-100 text-amber-600 text-[10px] font-bold uppercase tracking-wider">
-              <ShieldAlert className="w-3.5 h-3.5" />
-              <span>Developer (To Do Access Only)</span>
-            </div>
-          )}
-
-          <button 
-            onClick={loadBoardData}
-            disabled={loading}
-            className="p-2 border border-slate-200 hover:border-slate-300 hover:bg-slate-50 rounded-xl bg-white text-slate-600 transition-all cursor-pointer disabled:opacity-40"
-            title="Refresh Status Board"
-          >
-            <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
-          </button>
-        </div>
       </div>
 
       {/* Error display */}
