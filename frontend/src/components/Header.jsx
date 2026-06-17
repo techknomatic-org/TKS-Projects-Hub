@@ -51,7 +51,7 @@ const Header = ({ setActiveTab, sidebarOpen, setSidebarOpen }) => {
   const handleLogout = () => {
     authService.logout();
     socketService.disconnect();
-    navigate('/login');
+    window.location.href = '/login';
   };
 
   const getInitials = (name) => {

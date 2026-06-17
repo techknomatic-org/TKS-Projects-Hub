@@ -141,7 +141,7 @@ const Login = () => {
     setErrorMsg('');
     // Clean up local session on access denial so they can retry
     authService.logout();
-    navigate('/login');
+    window.location.href = '/login';
   };
 
   // Access Denied Screen Overlay

@@ -21,7 +21,7 @@ const Sidebar = ({ activeTab, setActiveTab, isOpen, setIsOpen }) => {
 
   const handleLogout = () => {
     authService.logout();
-    navigate('/login');
+    window.location.href = '/login';
   };
 
   const menuItems = [
