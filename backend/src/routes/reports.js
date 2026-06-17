@@ -29,10 +29,7 @@ router.get('/reports/status-distribution', authMiddleware, async (req, res) => {
     const distribution = {
       TODO: 0,
       IN_PROGRESS: 0,
-      IN_REVIEW: 0,
       TESTING: 0,
-      BLOCKED: 0,
-      READY_FOR_RELEASE: 0,
       DONE: 0
     };
 

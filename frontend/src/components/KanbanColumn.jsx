@@ -13,25 +13,10 @@ const COLUMN_CONFIG = {
     bulletColor: 'bg-blue-500',
     colBg: 'bg-blue-50/70'
   },
-  IN_REVIEW: {
-    title: 'In Review',
-    bulletColor: 'bg-[#8B5CF6]', // Purple
-    colBg: 'bg-purple-50/60'
-  },
   TESTING: {
     title: 'Testing',
     bulletColor: 'bg-amber-500',
     colBg: 'bg-amber-50/60'
-  },
-  BLOCKED: {
-    title: 'Blocked',
-    bulletColor: 'bg-red-500',
-    colBg: 'bg-red-50/70'
-  },
-  READY_FOR_RELEASE: {
-    title: 'Ready for Release',
-    bulletColor: 'bg-emerald-500',
-    colBg: 'bg-emerald-50/60'
   },
   DONE: {
     title: 'Done',

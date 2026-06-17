@@ -6,7 +6,7 @@ import KanbanColumn from './KanbanColumn.jsx';
 import EditStatusModal from './EditStatusModal.jsx';
 import { ShieldAlert, ShieldCheck, RefreshCw } from 'lucide-react';
 
-const COLUMNS = ['TODO', 'IN_PROGRESS', 'IN_REVIEW', 'TESTING', 'BLOCKED', 'READY_FOR_RELEASE', 'DONE'];
+const COLUMNS = ['TODO', 'IN_PROGRESS', 'TESTING', 'DONE'];
 
 const KanbanBoard = ({ selectedProduct }) => {
   const user = authService.getUser();

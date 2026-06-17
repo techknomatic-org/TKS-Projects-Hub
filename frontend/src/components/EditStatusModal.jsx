@@ -72,10 +72,7 @@ const EditStatusModal = ({
   const statusOptions = [
     { value: 'TODO', label: 'To Do' },
     { value: 'IN_PROGRESS', label: 'In Progress' },
-    { value: 'IN_REVIEW', label: 'In Review' },
     { value: 'TESTING', label: 'Testing' },
-    { value: 'BLOCKED', label: 'Blocked' },
-    { value: 'READY_FOR_RELEASE', label: 'Ready for Release' },
     { value: 'DONE', label: 'Done' }
   ];
 
