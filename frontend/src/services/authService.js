@@ -26,6 +26,13 @@ export const authService = {
   logout() {
     localStorage.removeItem('tks_token');
     localStorage.removeItem('tks_user');
+    sessionStorage.clear();
+    // Clear any MSAL items in localStorage just in case cacheLocation is changed in the future
+    Object.keys(localStorage).forEach((key) => {
+      if (key.startsWith('msal.')) {
+        localStorage.removeItem(key);
+      }
+    });
   },
 
   // Check if user has active session
