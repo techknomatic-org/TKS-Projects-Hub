@@ -29,9 +29,26 @@ function getSigningKey(kid) {
 
 // Helper function to decode and verify Microsoft JWT tokens
 async function verifyMicrosoftToken(token) {
+  const isDiag = process.env.AUTH_DIAGNOSTICS === 'true';
+  
   const decodedToken = jwt.decode(token, { complete: true });
   if (!decodedToken || !decodedToken.header || !decodedToken.header.kid) {
+    if (isDiag) console.error('[DIAGNOSTIC ERROR] jwt.decode returned null or header is invalid');
     throw new Error('Invalid token structure');
+  }
+
+  if (isDiag) {
+    console.log('[DIAGNOSTIC] Decoded Token metadata:', {
+      kid: decodedToken.header?.kid,
+      alg: decodedToken.header?.alg,
+      iss: decodedToken.payload?.iss,
+      aud: decodedToken.payload?.aud,
+      exp: decodedToken.payload?.exp,
+      nbf: decodedToken.payload?.nbf,
+      iat: decodedToken.payload?.iat,
+      ver: decodedToken.payload?.ver,
+      tid: decodedToken.payload?.tid
+    });
   }
 
   const signingKey = await getSigningKey(decodedToken.header.kid);
@@ -42,13 +59,21 @@ async function verifyMicrosoftToken(token) {
       // but in strict mode we would check: audience: process.env.AZURE_CLIENT_ID
     }, (err, decoded) => {
       if (err) {
+        if (isDiag) {
+          console.error('[DIAGNOSTIC ERROR] jwt.verify validation failed:', {
+            name: err.name,
+            message: err.message
+          });
+        }
         reject(err);
       } else {
+        if (isDiag) console.log('[DIAGNOSTIC] jwt.verify signature verification succeeded');
         resolve(decoded);
       }
     });
   });
 }
+
 
 // POST /api/auth/microsoft
 router.post('/microsoft', async (req, res) => {
@@ -143,10 +168,14 @@ router.post('/microsoft', async (req, res) => {
     });
 
   } catch (error) {
-    console.error('[AUTH ERROR] Authentication failed:', error);
+    if (process.env.AUTH_DIAGNOSTICS === 'true') {
+      console.error('[DIAGNOSTIC ERROR] POST /microsoft caught exception:', {
+        name: error.name,
+        message: error.message
+      });
+    }
     return res.status(500).json({ 
-      message: 'Authentication failed. Please verify your Microsoft credentials and try again.',
-      details: error.message 
+      message: 'Authentication failed. Please verify your Microsoft credentials and try again.'
     });
   }
 });

@@ -25,6 +25,17 @@ import errorMiddleware from './middlewares/errorMiddleware.js';
 // Load environment variables
 dotenv.config();
 
+// TEMPORARY DIAGNOSTIC STARTUP CHECK (server.js)
+if (process.env.AUTH_DIAGNOSTICS === 'true') {
+  console.log('[DIAGNOSTIC STARTUP] checking env variables presence:');
+  console.log(' - DATABASE_URL present:', !!process.env.DATABASE_URL);
+  console.log(' - JWT_SECRET present:', !!process.env.JWT_SECRET);
+  console.log(' - AZURE_CLIENT_ID present:', !!process.env.AZURE_CLIENT_ID);
+  console.log(' - AZURE_TENANT_ID present:', !!process.env.AZURE_TENANT_ID);
+  console.log(' - BYPASS_MICROSOFT_AUTH present:', !!process.env.BYPASS_MICROSOFT_AUTH);
+}
+
+
 // Validate required environment variables on startup
 const requiredEnvVars = ['DATABASE_URL', 'JWT_SECRET', 'AZURE_CLIENT_ID', 'AZURE_TENANT_ID'];
 const missingEnvVars = requiredEnvVars.filter(v => !process.env[v]);
