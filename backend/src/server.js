@@ -1,6 +1,6 @@
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import http from 'http';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
@@ -22,8 +22,8 @@ import { initSocket } from './lib/socket.js';
 import logger from './lib/logger.js';
 import errorMiddleware from './middlewares/errorMiddleware.js';
 
-// Load environment variables
-dotenv.config();
+// Load environment variables configured via top-level import
+
 
 // TEMPORARY DIAGNOSTIC STARTUP CHECK (server.js)
 if (process.env.AUTH_DIAGNOSTICS === 'true') {
