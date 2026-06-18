@@ -7,11 +7,22 @@ let socket = null;
 const listeners = new Set();
 
 export const socketService = {
-  connect() {
+  async connect() {
     if (socket?.connected) return;
 
-    const token = authService.getToken();
+    let token = authService.getToken();
     if (!token) return;
+
+    // Pre-flight check: if token is expired, attempt silent refresh before connecting
+    if (authService.isTokenExpired(token)) {
+      console.log('[SOCKET] Token is expired or expiring. Refreshing silently before connecting...');
+      try {
+        token = await authService.refreshSessionSilently();
+      } catch (err) {
+        console.error('[SOCKET] Failed to refresh token for socket connection:', err);
+        return;
+      }
+    }
 
     console.log('[SOCKET] Connecting to server at:', SOCKET_URL);
     socket = io(SOCKET_URL, {
@@ -29,8 +40,22 @@ export const socketService = {
       console.warn('[SOCKET] Disconnected:', reason);
     });
 
-    socket.on('connect_error', (error) => {
+    socket.on('connect_error', async (error) => {
       console.error('[SOCKET] Connection Error:', error.message);
+      
+      // Post-flight check: If rejected due to token expiry, silently refresh and reconnect
+      if (error.message && (error.message.includes('expired') || error.message.includes('Authentication error'))) {
+        console.log('[SOCKET] Auth error detected on socket. Attempting silent token refresh...');
+        try {
+          const newToken = await authService.refreshSessionSilently();
+          if (socket) {
+            socket.auth.token = newToken;
+            socket.connect();
+          }
+        } catch (err) {
+          console.error('[SOCKET] Failed to refresh token for socket reconnection:', err);
+        }
+      }
     });
 
     socket.on('notification', (newNotification) => {

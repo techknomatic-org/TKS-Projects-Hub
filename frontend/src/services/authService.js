@@ -1,6 +1,60 @@
+import { msalInstance } from './msalService.js';
+
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 export const authService = {
+  // Check if a JWT token is expired or close to expiring (within 5 minutes)
+  isTokenExpired(token) {
+    if (!token) return true;
+    try {
+      const base64Url = token.split('.')[1];
+      const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      const jsonPayload = decodeURIComponent(
+        window.atob(base64)
+          .split('')
+          .map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
+          .join('')
+      );
+      const { exp } = JSON.parse(jsonPayload);
+      return Date.now() >= exp * 1000 - 5 * 60 * 1000;
+    } catch {
+      return true;
+    }
+  },
+
+  // Silently refresh session using MSAL
+  async refreshSessionSilently() {
+    try {
+      console.log('[AUTH] Attempting silent MSAL token acquisition...');
+      const accounts = msalInstance.getAllAccounts();
+      if (accounts.length === 0) {
+        throw new Error('No Microsoft accounts logged in.');
+      }
+
+      const account = accounts[0];
+      // Silently acquire a fresh token from MSAL
+      const tokenResult = await msalInstance.acquireTokenSilent({
+        scopes: ['user.read', 'openid', 'profile', 'email'],
+        account: account
+      });
+
+      const idToken = tokenResult.idToken;
+      const userEmail = account.username || '';
+
+      console.log('[AUTH] Silently verified with Microsoft. Verifying with TKS server...', userEmail);
+      
+      // Exchange Microsoft token for a fresh TKS backend JWT
+      const data = await this.loginWithMicrosoft(idToken, userEmail);
+      
+      console.log('[AUTH] Silent session refresh successful.');
+      return data.token;
+    } catch (error) {
+      console.error('[AUTH] Silent session refresh failed:', error);
+      this.logout();
+      throw error;
+    }
+  },
+
   // Get token from localStorage
   getToken() {
     return localStorage.getItem('tks_token');
@@ -35,9 +89,10 @@ export const authService = {
     });
   },
 
-  // Check if user has active session
+  // Check if user has active session and token is not expired
   isAuthenticated() {
-    return !!this.getToken();
+    const token = this.getToken();
+    return !!token && !this.isTokenExpired(token);
   },
 
   // Authenticate with backend using Microsoft ID Token or a developer mock email

@@ -2,6 +2,62 @@ import { authService } from './authService.js';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
+// Shadowed fetch function to intercept all API requests and handle silent JWT refresh seamlessly
+const fetch = async (url, options = {}) => {
+  let token = authService.getToken();
+
+  // 1. Pre-flight expiry check
+  if (token && authService.isTokenExpired(token)) {
+    console.log('[API] Shadow fetch: Token is expired or expiring. Refreshing silently...');
+    try {
+      token = await authService.refreshSessionSilently();
+      if (options.headers) {
+        if (typeof options.headers.set === 'function') {
+          options.headers.set('Authorization', `Bearer ${token}`);
+        } else {
+          options.headers['Authorization'] = `Bearer ${token}`;
+        }
+      }
+    } catch (err) {
+      console.error('[API] Shadow fetch pre-flight refresh failed. Redirecting to login.');
+      window.location.href = '/login';
+      throw new Error('Session expired');
+    }
+  }
+
+  // 2. Perform the actual fetch request
+  let response = await window.fetch(url, options);
+
+  // 3. Post-flight 401 check (if token expired on server or was rejected)
+  if (response.status === 401) {
+    console.warn('[API] Shadow fetch: Request returned 401. Retrying with refreshed token...');
+    try {
+      token = await authService.refreshSessionSilently();
+      if (options.headers) {
+        if (typeof options.headers.set === 'function') {
+          options.headers.set('Authorization', `Bearer ${token}`);
+        } else {
+          options.headers['Authorization'] = `Bearer ${token}`;
+        }
+      }
+      
+      // Update Authorization header in options for retry
+      const retryHeaders = {
+        ...options.headers,
+        'Authorization': `Bearer ${token}`
+      };
+      
+      response = await window.fetch(url, { ...options, headers: retryHeaders });
+    } catch (err) {
+      console.error('[API] Shadow fetch retry failed. Redirecting to login.');
+      window.location.href = '/login';
+      throw new Error('Session expired');
+    }
+  }
+
+  return response;
+};
+
 const getAuthHeaders = () => {
   const token = authService.getToken();
   return {
