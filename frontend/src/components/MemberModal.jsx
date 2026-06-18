@@ -167,7 +167,7 @@ export const MemberModal = ({
               disabled={isEditingSelf}
               className="w-full bg-white border border-slate-200 rounded-xl py-2.5 px-3 text-sm font-semibold text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all cursor-pointer disabled:bg-slate-50 disabled:text-slate-400 disabled:cursor-not-allowed"
             >
-              <option value="EMPLOYEE">Developer (Employee)</option>
+              <option value="EMPLOYEE">Developer</option>
               <option value="ADMIN">Administrator</option>
               <option value="BOTH">Admin & Developer</option>
             </select>

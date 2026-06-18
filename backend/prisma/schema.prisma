@@ -35,7 +35,7 @@ model User {
   name            String
   email           String          @unique
   role            Role
-  profileImage    String?         @db.Text
+  profileImage    String?         @db.MediumText
   isActive        Boolean         @default(true)
   createdAt       DateTime        @default(now())
   updatedAt       DateTime        @updatedAt

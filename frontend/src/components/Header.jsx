@@ -165,7 +165,7 @@ const Header = ({ setActiveTab, sidebarOpen, setSidebarOpen }) => {
                       : 'bg-indigo-50 text-indigo-600 border border-indigo-100'
                 }`}>
                   {isEmployee ? <User className="w-3 h-3" /> : <Shield className="w-3 h-3" />}
-                  {isBoth ? 'Admin & Dev' : user?.role}
+                  {isBoth ? 'Admin & Dev' : isEmployee ? 'Developer' : 'Admin'}
                 </span>
               </div>
 

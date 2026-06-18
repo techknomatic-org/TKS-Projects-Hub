@@ -134,12 +134,17 @@ router.post('/microsoft', async (req, res) => {
 
     // Update profile image if one was fetched from MS Graph
     if (incomingProfileImage && user.profileImage !== incomingProfileImage) {
-      await prisma.user.update({
-        where: { id: user.id },
-        data: { profileImage: incomingProfileImage }
-      });
-      user.profileImage = incomingProfileImage;
-      console.log(`[AUTH] Updated profile image for user: ${email}`);
+      try {
+        await prisma.user.update({
+          where: { id: user.id },
+          data: { profileImage: incomingProfileImage }
+        });
+        user.profileImage = incomingProfileImage;
+        console.log(`[AUTH] Updated profile image for user: ${email}`);
+      } catch (profileImageError) {
+        console.warn(`[AUTH] Failed to update profile image for user ${email}:`, profileImageError.message);
+        // Do not block login if profile image save fails (e.g. data too long for column type)
+      }
     }
 
     // Generate local JWT token
