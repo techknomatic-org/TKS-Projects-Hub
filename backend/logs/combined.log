@@ -9437,3 +9437,21 @@ Transaction API error: Transaction not found. Transaction ID is invalid, refers 
 [2026-06-16 18:26:10:2610] [INFO]: ==================================================
 [2026-06-16 18:26:11:2611] [INFO]: [SOCKET] User connected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: er6vOIwT582aupeGAAAB
 [2026-06-16 18:26:12:2612] [INFO]: [SOCKET] User connected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: UfHvIpA6zX7gRQJNAAAD
+[2026-06-16 18:49:20:4920] [INFO]: [SOCKET] User disconnected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: er6vOIwT582aupeGAAAB
+[2026-06-16 18:49:20:4920] [INFO]: [SOCKET] User disconnected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: UfHvIpA6zX7gRQJNAAAD
+[2026-06-16 21:37:32:3732] [INFO]: [SOCKET] User connected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: NsSne4RnOxhQVG3yAAAF
+[2026-06-16 21:37:36:3736] [INFO]: [SOCKET] User connected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: -vLXf_DJbqdV2F4tAAAH
+[2026-06-16 21:38:44:3844] [INFO]: [SOCKET] User disconnected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: NsSne4RnOxhQVG3yAAAF
+[2026-06-16 21:38:44:3844] [INFO]: [SOCKET] User disconnected: Krishna Shelar (f1ed7772-c93e-4339-90de-752bdef336eb) - Socket: -vLXf_DJbqdV2F4tAAAH
+[2026-06-17 18:23:23:2323] [INFO]: ==================================================
+[2026-06-17 18:23:23:2323] [INFO]: 🚀 TKS API Server with Socket.IO is running on port: 5000
+[2026-06-17 18:23:23:2323] [INFO]: 🔐 Bypass MS Auth status: false
+[2026-06-17 18:23:23:2323] [INFO]: ==================================================
+[2026-06-17 20:23:13:2313] [INFO]: ==================================================
+[2026-06-17 20:23:13:2313] [INFO]: 🚀 TKS API Server with Socket.IO is running on port: 5000
+[2026-06-17 20:23:13:2313] [INFO]: 🔐 Bypass MS Auth status: false
+[2026-06-17 20:23:13:2313] [INFO]: ==================================================
+[2026-06-17 20:31:39:3139] [INFO]: ==================================================
+[2026-06-17 20:31:39:3139] [INFO]: 🚀 TKS API Server with Socket.IO is running on port: 5000
+[2026-06-17 20:31:39:3139] [INFO]: 🔐 Bypass MS Auth status: false
+[2026-06-17 20:31:39:3139] [INFO]: ==================================================
