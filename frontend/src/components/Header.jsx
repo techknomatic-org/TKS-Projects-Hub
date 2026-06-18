@@ -97,14 +97,21 @@ const Header = ({ setActiveTab, sidebarOpen, setSidebarOpen }) => {
           </button>
         )}
         {/* Workspace Icon */}
-        <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-[#0F52BA] to-[#2563EB] flex items-center justify-center text-white shrink-0 shadow-md shadow-blue-500/10 hover:scale-105 transition-transform duration-200 cursor-pointer">
-          <FolderKanban className="w-5.5 h-5.5" />
+        <div className="w-11 h-11 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-transform duration-200 cursor-pointer p-1.5">
+          <img 
+            src="/tks.png" 
+            alt="TKS Logo" 
+            className="w-full h-full object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+            }}
+          />
         </div>
 
         {/* Workspace Titles */}
         <div className="min-w-0">
           <h1 className="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight select-none">
-            TKS Projects Hub
+            TKS Projects HUB
           </h1>
           <p className="text-[11px] md:text-xs text-slate-500 font-medium mt-1 select-none leading-relaxed max-w-2xl">
             Centralized workspace to track, manage, and collaborate across all TKS initiatives.
