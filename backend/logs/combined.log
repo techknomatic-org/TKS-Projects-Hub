@@ -9455,3 +9455,498 @@ Transaction API error: Transaction not found. Transaction ID is invalid, refers 
 [2026-06-17 20:31:39:3139] [INFO]: 🚀 TKS API Server with Socket.IO is running on port: 5000
 [2026-06-17 20:31:39:3139] [INFO]: 🔐 Bypass MS Auth status: false
 [2026-06-17 20:31:39:3139] [INFO]: ==================================================
+[2026-06-19 16:32:49:3249] [INFO]: ==================================================
+[2026-06-19 16:32:49:3249] [INFO]: 🚀 TKS API Server with Socket.IO is running on port: 5000
+[2026-06-19 16:32:49:3249] [INFO]: 🔐 Bypass MS Auth status: false
+[2026-06-19 16:32:49:3249] [INFO]: ==================================================
+[2026-06-19 16:33:08:338] [INFO]: OPTIONS /api/auth/microsoft 204 0 - 3.143 ms
+[2026-06-19 16:33:09:339] [INFO]: POST /api/auth/microsoft 200 44335 - 1236.604 ms
+[2026-06-19 16:33:09:339] [INFO]: OPTIONS /api/products 204 0 - 1.218 ms
+[2026-06-19 16:33:09:339] [INFO]: OPTIONS /api/products 204 0 - 0.560 ms
+[2026-06-19 16:33:09:339] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: WqRJm6ivC-XPtR3EAAAC
+[2026-06-19 16:33:09:339] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: XRdSz_AyOYcaeMEOAAAD
+[2026-06-19 16:33:10:3310] [INFO]: GET /api/products 200 2008 - 144.986 ms
+[2026-06-19 16:33:10:3310] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.355 ms
+[2026-06-19 16:33:10:3310] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.218 ms
+[2026-06-19 16:33:10:3310] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.256 ms
+[2026-06-19 16:33:10:3310] [INFO]: GET /api/products 304 - - 82.373 ms
+[2026-06-19 16:33:10:3310] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 200 228114 - 587.704 ms
+[2026-06-19 16:33:10:3310] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 132.892 ms
+[2026-06-19 16:33:10:3310] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 200 462 - 740.434 ms
+[2026-06-19 16:33:10:3310] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 92.001 ms
+[2026-06-19 16:33:11:3311] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 222.308 ms
+[2026-06-19 16:33:11:3311] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 219.595 ms
+[2026-06-19 16:33:17:3317] [INFO]: OPTIONS /api/users/all 204 0 - 0.169 ms
+[2026-06-19 16:33:17:3317] [INFO]: OPTIONS /api/users/all 204 0 - 0.193 ms
+[2026-06-19 16:33:17:3317] [INFO]: OPTIONS /api/products 204 0 - 0.583 ms
+[2026-06-19 16:33:17:3317] [INFO]: OPTIONS /api/products 204 0 - 0.322 ms
+[2026-06-19 16:33:17:3317] [INFO]: GET /api/products 304 - - 115.748 ms
+[2026-06-19 16:33:17:3317] [INFO]: GET /api/products 304 - - 95.880 ms
+[2026-06-19 16:33:18:3318] [INFO]: GET /api/users/all 200 234251 - 1022.189 ms
+[2026-06-19 16:33:18:3318] [INFO]: GET /api/users/all 304 - - 405.821 ms
+[2026-06-19 16:35:27:3527] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.166 ms
+[2026-06-19 16:35:27:3527] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.278 ms
+[2026-06-19 16:35:27:3527] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.130 ms
+[2026-06-19 16:35:27:3527] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.161 ms
+[2026-06-19 16:35:27:3527] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.140 ms
+[2026-06-19 16:35:27:3527] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.210 ms
+[2026-06-19 16:35:27:3527] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 421.924 ms
+[2026-06-19 16:35:27:3527] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 200 709708 - 517.686 ms
+[2026-06-19 16:35:27:3527] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 200 1832800 - 573.586 ms
+[2026-06-19 16:35:27:3527] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 158.881 ms
+[2026-06-19 16:35:28:3528] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 352.301 ms
+[2026-06-19 16:35:28:3528] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 484.499 ms
+[2026-06-19 16:35:39:3539] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.295 ms
+[2026-06-19 16:35:39:3539] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 2.513 ms
+[2026-06-19 16:35:39:3539] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 2.075 ms
+[2026-06-19 16:35:39:3539] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.123 ms
+[2026-06-19 16:35:39:3539] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 305.890 ms
+[2026-06-19 16:35:39:3539] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 414.260 ms
+[2026-06-19 16:35:39:3539] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 109.825 ms
+[2026-06-19 16:35:40:3540] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 406.532 ms
+[2026-06-19 16:36:05:365] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: WqRJm6ivC-XPtR3EAAAC
+[2026-06-19 16:36:05:365] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: XRdSz_AyOYcaeMEOAAAD
+[2026-06-19 16:36:05:365] [INFO]: OPTIONS /api/products 204 0 - 0.529 ms
+[2026-06-19 16:36:05:365] [INFO]: OPTIONS /api/products 204 0 - 0.195 ms
+[2026-06-19 16:36:05:365] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: nkR24Pta6w8RaVIeAAAG
+[2026-06-19 16:36:05:365] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: d6Hklx0GXN5p2vTFAAAH
+[2026-06-19 16:36:05:365] [INFO]: GET /api/products 304 - - 127.663 ms
+[2026-06-19 16:36:05:365] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.179 ms
+[2026-06-19 16:36:05:365] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.166 ms
+[2026-06-19 16:36:05:365] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.118 ms
+[2026-06-19 16:36:05:365] [INFO]: GET /api/products 304 - - 81.048 ms
+[2026-06-19 16:36:05:365] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 298.182 ms
+[2026-06-19 16:36:06:366] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 334.356 ms
+[2026-06-19 16:36:06:366] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 275.115 ms
+[2026-06-19 16:36:06:366] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 239.399 ms
+[2026-06-19 16:36:06:366] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 492.365 ms
+[2026-06-19 16:36:06:366] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 85.958 ms
+[2026-06-19 16:36:07:367] [INFO]: OPTIONS /api/status/c7abf630-e327-4fc7-b909-48f8ad9195e7 204 0 - 0.127 ms
+[2026-06-19 16:36:09:369] [INFO]: [NOTIFICATION SERVICE] Creating notification for user 5219bd51-1f74-4da4-b079-a3a27fb3326a: "Task Status Changed"
+[2026-06-19 16:36:09:369] [INFO]: [SOCKET] Emitting event "notification" to user room 5219bd51-1f74-4da4-b079-a3a27fb3326a
+[2026-06-19 16:36:09:369] [INFO]: PUT /api/status/c7abf630-e327-4fc7-b909-48f8ad9195e7 200 467 - 1759.987 ms
+[2026-06-19 16:36:10:3610] [INFO]: [NOTIFICATION SERVICE] Creating notification for user 5219bd51-1f74-4da4-b079-a3a27fb3326a: "Task Status Changed"
+[2026-06-19 16:36:10:3610] [INFO]: [SOCKET] Emitting event "notification" to user room 5219bd51-1f74-4da4-b079-a3a27fb3326a
+[2026-06-19 16:36:10:3610] [INFO]: PUT /api/status/c7abf630-e327-4fc7-b909-48f8ad9195e7 200 460 - 1614.845 ms
+[2026-06-19 16:36:11:3611] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.117 ms
+[2026-06-19 16:36:11:3611] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.082 ms
+[2026-06-19 16:36:11:3611] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.080 ms
+[2026-06-19 16:36:11:3611] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.182 ms
+[2026-06-19 16:36:11:3611] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.187 ms
+[2026-06-19 16:36:11:3611] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 320.488 ms
+[2026-06-19 16:36:11:3611] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 392.391 ms
+[2026-06-19 16:36:11:3611] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 402.480 ms
+[2026-06-19 16:36:11:3611] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 223.093 ms
+[2026-06-19 16:36:12:3612] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 133.467 ms
+[2026-06-19 16:36:12:3612] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 269.599 ms
+[2026-06-19 16:36:12:3612] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.127 ms
+[2026-06-19 16:36:12:3612] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.095 ms
+[2026-06-19 16:36:12:3612] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 125.622 ms
+[2026-06-19 16:36:12:3612] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 88.136 ms
+[2026-06-19 16:36:12:3612] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 200 462 - 224.126 ms
+[2026-06-19 16:36:12:3612] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 210.633 ms
+[2026-06-19 16:36:12:3612] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 241.324 ms
+[2026-06-19 16:36:12:3612] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 247.908 ms
+[2026-06-19 16:36:12:3612] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 75.097 ms
+[2026-06-19 16:36:13:3613] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 282.291 ms
+[2026-06-19 16:36:34:3634] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.334 ms
+[2026-06-19 16:36:34:3634] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.099 ms
+[2026-06-19 16:36:34:3634] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.097 ms
+[2026-06-19 16:36:34:3634] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 1.260 ms
+[2026-06-19 16:36:34:3634] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.088 ms
+[2026-06-19 16:36:34:3634] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.145 ms
+[2026-06-19 16:36:34:3634] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 350.659 ms
+[2026-06-19 16:36:34:3634] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 454.804 ms
+[2026-06-19 16:36:34:3634] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 470.598 ms
+[2026-06-19 16:36:34:3634] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 143.827 ms
+[2026-06-19 16:36:35:3635] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 481.000 ms
+[2026-06-19 16:36:35:3635] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 490.495 ms
+[2026-06-19 16:37:24:3724] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.351 ms
+[2026-06-19 16:37:24:3724] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.160 ms
+[2026-06-19 16:37:24:3724] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.096 ms
+[2026-06-19 16:37:24:3724] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.200 ms
+[2026-06-19 16:37:24:3724] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 312.146 ms
+[2026-06-19 16:37:24:3724] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 172.128 ms
+[2026-06-19 16:37:24:3724] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 446.877 ms
+[2026-06-19 16:37:24:3724] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 91.481 ms
+[2026-06-19 16:37:25:3725] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.149 ms
+[2026-06-19 16:37:25:3725] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.121 ms
+[2026-06-19 16:37:25:3725] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 89.471 ms
+[2026-06-19 16:37:25:3725] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 85.150 ms
+[2026-06-19 16:37:25:3725] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 319.952 ms
+[2026-06-19 16:37:25:3725] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 440.492 ms
+[2026-06-19 16:37:25:3725] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 291.863 ms
+[2026-06-19 16:37:25:3725] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 260.455 ms
+[2026-06-19 16:37:26:3726] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 85.814 ms
+[2026-06-19 16:37:26:3726] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 89.474 ms
+[2026-06-19 16:37:26:3726] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 302.184 ms
+[2026-06-19 16:37:26:3726] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 239.500 ms
+[2026-06-19 16:38:20:3820] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: d6Hklx0GXN5p2vTFAAAH
+[2026-06-19 16:38:20:3820] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: nkR24Pta6w8RaVIeAAAG
+[2026-06-19 16:38:21:3821] [INFO]: OPTIONS /api/products 204 0 - 0.204 ms
+[2026-06-19 16:38:21:3821] [INFO]: OPTIONS /api/products 204 0 - 0.192 ms
+[2026-06-19 16:38:21:3821] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: r_hXpMlwomtClJNXAAAK
+[2026-06-19 16:38:21:3821] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: S56U_xtB-SGmm3faAAAL
+[2026-06-19 16:38:21:3821] [INFO]: GET /api/products 304 - - 549.880 ms
+[2026-06-19 16:38:21:3821] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.152 ms
+[2026-06-19 16:38:21:3821] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.127 ms
+[2026-06-19 16:38:21:3821] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.144 ms
+[2026-06-19 16:38:21:3821] [INFO]: GET /api/products 304 - - 61.733 ms
+[2026-06-19 16:38:22:3822] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 352.253 ms
+[2026-06-19 16:38:22:3822] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 68.054 ms
+[2026-06-19 16:38:22:3822] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 74.741 ms
+[2026-06-19 16:38:22:3822] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 597.981 ms
+[2026-06-19 16:38:22:3822] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 183.459 ms
+[2026-06-19 16:38:22:3822] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 181.403 ms
+[2026-06-19 16:38:30:3830] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.134 ms
+[2026-06-19 16:38:30:3830] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.082 ms
+[2026-06-19 16:38:30:3830] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.246 ms
+[2026-06-19 16:38:30:3830] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.124 ms
+[2026-06-19 16:38:30:3830] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 342.466 ms
+[2026-06-19 16:38:31:3831] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 500.758 ms
+[2026-06-19 16:38:31:3831] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 152.779 ms
+[2026-06-19 16:38:31:3831] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 551.060 ms
+[2026-06-19 16:38:44:3844] [INFO]: OPTIONS /api/features/ae094073-7dc5-49ee-9580-18da4d73dcbf 204 0 - 0.303 ms
+[2026-06-19 16:38:46:3846] [INFO]: [NOTIFICATION SERVICE] Creating notification for user 9a5609b6-18cf-46ba-bbf5-8e01d52d210f: "Feature Assigned"
+[2026-06-19 16:38:46:3846] [INFO]: [SOCKET] Emitting event "notification" to user room 9a5609b6-18cf-46ba-bbf5-8e01d52d210f
+[2026-06-19 16:38:46:3846] [INFO]: [NOTIFICATION SERVICE] Creating notification for user 9a5609b6-18cf-46ba-bbf5-8e01d52d210f: "Feature Updated"
+[2026-06-19 16:38:47:3847] [INFO]: [SOCKET] Emitting event "notification" to user room 9a5609b6-18cf-46ba-bbf5-8e01d52d210f
+[2026-06-19 16:38:47:3847] [INFO]: PUT /api/features/ae094073-7dc5-49ee-9580-18da4d73dcbf 200 83156 - 2181.395 ms
+[2026-06-19 16:38:49:3849] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.113 ms
+[2026-06-19 16:38:49:3849] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.090 ms
+[2026-06-19 16:38:50:3850] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 421.644 ms
+[2026-06-19 16:38:50:3850] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 200 1871502 - 512.339 ms
+[2026-06-19 16:38:59:3859] [INFO]: OPTIONS /api/features/63454124-33a7-4619-898f-025d7ed4b3c6 204 0 - 0.315 ms
+[2026-06-19 16:39:00:390] [INFO]: [NOTIFICATION SERVICE] Creating notification for user de8d0345-d3af-4f54-82ff-4ec269040688: "Feature Updated"
+[2026-06-19 16:39:00:390] [INFO]: [SOCKET] Emitting event "notification" to user room de8d0345-d3af-4f54-82ff-4ec269040688
+[2026-06-19 16:39:00:390] [INFO]: PUT /api/features/63454124-33a7-4619-898f-025d7ed4b3c6 200 44460 - 1172.688 ms
+[2026-06-19 16:39:03:393] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.260 ms
+[2026-06-19 16:39:03:393] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.202 ms
+[2026-06-19 16:39:03:393] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 323.646 ms
+[2026-06-19 16:39:04:394] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 200 1871498 - 515.016 ms
+[2026-06-19 16:40:26:4026] [INFO]: OPTIONS /api/users/all 204 0 - 0.319 ms
+[2026-06-19 16:40:26:4026] [INFO]: OPTIONS /api/products 204 0 - 0.151 ms
+[2026-06-19 16:40:26:4026] [INFO]: OPTIONS /api/products 204 0 - 0.141 ms
+[2026-06-19 16:40:26:4026] [INFO]: OPTIONS /api/users/all 204 0 - 0.116 ms
+[2026-06-19 16:40:27:4027] [INFO]: GET /api/products 304 - - 180.469 ms
+[2026-06-19 16:40:27:4027] [INFO]: GET /api/products 304 - - 60.264 ms
+[2026-06-19 16:40:27:4027] [INFO]: GET /api/users/all 200 234289 - 903.645 ms
+[2026-06-19 16:40:28:4028] [INFO]: GET /api/users/all 304 - - 313.050 ms
+[2026-06-19 16:40:58:4058] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.300 ms
+[2026-06-19 16:40:58:4058] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.105 ms
+[2026-06-19 16:40:58:4058] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.137 ms
+[2026-06-19 16:40:58:4058] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.144 ms
+[2026-06-19 16:40:58:4058] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 372.853 ms
+[2026-06-19 16:40:58:4058] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 378.576 ms
+[2026-06-19 16:40:59:4059] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 203.841 ms
+[2026-06-19 16:40:59:4059] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 219.716 ms
+[2026-06-19 16:40:59:4059] [INFO]: OPTIONS /api/requirements-mapping?projectId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.117 ms
+[2026-06-19 16:40:59:4059] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.119 ms
+[2026-06-19 16:40:59:4059] [INFO]: OPTIONS /api/functional-requirements?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.139 ms
+[2026-06-19 16:40:59:4059] [INFO]: OPTIONS /api/requirements-mapping?projectId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.086 ms
+[2026-06-19 16:40:59:4059] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.114 ms
+[2026-06-19 16:40:59:4059] [INFO]: OPTIONS /api/functional-requirements?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.335 ms
+[2026-06-19 16:41:00:410] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 343.081 ms
+[2026-06-19 16:41:00:410] [INFO]: GET /api/requirements-mapping?projectId=83281d32-b29d-41e1-8a24-1d9947920146 200 6607 - 516.973 ms
+[2026-06-19 16:41:00:410] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 238.977 ms
+[2026-06-19 16:41:00:410] [INFO]: GET /api/functional-requirements?productId=83281d32-b29d-41e1-8a24-1d9947920146 200 1503 - 584.670 ms
+[2026-06-19 16:41:00:410] [INFO]: GET /api/functional-requirements?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 67.901 ms
+[2026-06-19 16:41:00:410] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.126 ms
+[2026-06-19 16:41:00:410] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.199 ms
+[2026-06-19 16:41:00:410] [INFO]: GET /api/requirements-mapping?projectId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 280.358 ms
+[2026-06-19 16:41:00:410] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 144.711 ms
+[2026-06-19 16:41:00:410] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 101.104 ms
+[2026-06-19 16:41:01:411] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 477.715 ms
+[2026-06-19 16:41:01:411] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 552.837 ms
+[2026-06-19 16:41:01:411] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 235.556 ms
+[2026-06-19 16:41:01:411] [INFO]: OPTIONS /api/users/all 204 0 - 0.178 ms
+[2026-06-19 16:41:01:411] [INFO]: OPTIONS /api/products 204 0 - 0.176 ms
+[2026-06-19 16:41:01:411] [INFO]: OPTIONS /api/users/all 204 0 - 0.214 ms
+[2026-06-19 16:41:01:411] [INFO]: OPTIONS /api/products 204 0 - 0.092 ms
+[2026-06-19 16:41:01:411] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 397.253 ms
+[2026-06-19 16:41:01:411] [INFO]: GET /api/products 304 - - 130.295 ms
+[2026-06-19 16:41:01:411] [INFO]: GET /api/products 304 - - 87.592 ms
+[2026-06-19 16:41:02:412] [INFO]: GET /api/users/all 304 - - 728.133 ms
+[2026-06-19 16:41:02:412] [INFO]: GET /api/users/all 304 - - 383.875 ms
+[2026-06-19 16:45:22:4522] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.352 ms
+[2026-06-19 16:45:22:4522] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.102 ms
+[2026-06-19 16:45:22:4522] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.178 ms
+[2026-06-19 16:45:22:4522] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.083 ms
+[2026-06-19 16:45:23:4523] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 592.769 ms
+[2026-06-19 16:45:23:4523] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 198.250 ms
+[2026-06-19 16:45:23:4523] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 1294.382 ms
+[2026-06-19 16:45:24:4524] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 355.278 ms
+[2026-06-19 16:45:57:4557] [INFO]: OPTIONS /api/users/all 204 0 - 0.683 ms
+[2026-06-19 16:45:57:4557] [INFO]: OPTIONS /api/products 204 0 - 0.134 ms
+[2026-06-19 16:45:57:4557] [INFO]: OPTIONS /api/users/all 204 0 - 0.160 ms
+[2026-06-19 16:45:57:4557] [INFO]: OPTIONS /api/products 204 0 - 0.126 ms
+[2026-06-19 16:45:57:4557] [INFO]: GET /api/products 304 - - 122.550 ms
+[2026-06-19 16:45:57:4557] [INFO]: GET /api/products 304 - - 59.346 ms
+[2026-06-19 16:45:58:4558] [INFO]: GET /api/users/all 304 - - 891.951 ms
+[2026-06-19 16:45:58:4558] [INFO]: GET /api/users/all 304 - - 362.031 ms
+[2026-06-19 16:46:19:4619] [INFO]: OPTIONS /api/user-stories?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.193 ms
+[2026-06-19 16:46:19:4619] [INFO]: OPTIONS /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.100 ms
+[2026-06-19 16:46:19:4619] [INFO]: OPTIONS /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.084 ms
+[2026-06-19 16:46:19:4619] [INFO]: OPTIONS /api/user-stories?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.136 ms
+[2026-06-19 16:46:19:4619] [INFO]: OPTIONS /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.141 ms
+[2026-06-19 16:46:19:4619] [INFO]: OPTIONS /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.196 ms
+[2026-06-19 16:46:20:4620] [INFO]: GET /api/user-stories?productId=c188438d-8438-4278-88e0-6b1ee87aee76 200 2 - 584.666 ms
+[2026-06-19 16:46:20:4620] [INFO]: GET /api/user-stories?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 375.751 ms
+[2026-06-19 16:46:20:4620] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 200 381 - 1096.168 ms
+[2026-06-19 16:46:20:4620] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 108.833 ms
+[2026-06-19 16:46:21:4621] [INFO]: GET /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 200 2 - 1462.246 ms
+[2026-06-19 16:46:21:4621] [INFO]: GET /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 342.920 ms
+[2026-06-19 16:46:35:4635] [INFO]: OPTIONS /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.107 ms
+[2026-06-19 16:46:35:4635] [INFO]: OPTIONS /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.091 ms
+[2026-06-19 16:46:35:4635] [INFO]: OPTIONS /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.112 ms
+[2026-06-19 16:46:35:4635] [INFO]: OPTIONS /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.162 ms
+[2026-06-19 16:46:35:4635] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 162.158 ms
+[2026-06-19 16:46:35:4635] [INFO]: GET /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 228.670 ms
+[2026-06-19 16:46:35:4635] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 101.119 ms
+[2026-06-19 16:46:35:4635] [INFO]: OPTIONS /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 204 0 - 0.256 ms
+[2026-06-19 16:46:35:4635] [INFO]: OPTIONS /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 204 0 - 0.153 ms
+[2026-06-19 16:46:36:4636] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 83.876 ms
+[2026-06-19 16:46:36:4636] [INFO]: GET /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 181.498 ms
+[2026-06-19 16:46:36:4636] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 167.393 ms
+[2026-06-19 16:46:36:4636] [INFO]: GET /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 200 2 - 256.657 ms
+[2026-06-19 16:46:36:4636] [INFO]: GET /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 304 - - 119.210 ms
+[2026-06-19 16:49:40:4940] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: r_hXpMlwomtClJNXAAAK
+[2026-06-19 16:49:40:4940] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: S56U_xtB-SGmm3faAAAL
+[2026-06-19 17:22:36:2236] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: R0943VuyG7TFl5TIAAAO
+[2026-06-19 17:22:36:2236] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: FbtJ6D8F6PWdNas2AAAP
+[2026-06-19 17:22:37:2237] [INFO]: OPTIONS /api/products 204 0 - 0.201 ms
+[2026-06-19 17:22:37:2237] [INFO]: OPTIONS /api/products 204 0 - 0.105 ms
+[2026-06-19 17:22:37:2237] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: FXtJuLYDxdLW3PbUAAAS
+[2026-06-19 17:22:37:2237] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: x9GzOWAJZNQzvAU4AAAT
+[2026-06-19 17:22:38:2238] [INFO]: GET /api/products 304 - - 643.059 ms
+[2026-06-19 17:22:38:2238] [INFO]: OPTIONS /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 204 0 - 0.170 ms
+[2026-06-19 17:22:38:2238] [INFO]: OPTIONS /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.129 ms
+[2026-06-19 17:22:38:2238] [INFO]: OPTIONS /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 204 0 - 0.116 ms
+[2026-06-19 17:22:38:2238] [INFO]: OPTIONS /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.132 ms
+[2026-06-19 17:22:38:2238] [INFO]: GET /api/products 304 - - 111.738 ms
+[2026-06-19 17:22:38:2238] [INFO]: GET /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 304 - - 344.828 ms
+[2026-06-19 17:22:38:2238] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 521.937 ms
+[2026-06-19 17:22:38:2238] [INFO]: GET /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 304 - - 171.964 ms
+[2026-06-19 17:22:38:2238] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 134.576 ms
+[2026-06-19 17:22:38:2238] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 108.153 ms
+[2026-06-19 17:22:39:2239] [INFO]: GET /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 304 - - 328.832 ms
+[2026-06-19 17:22:43:2243] [INFO]: OPTIONS /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.210 ms
+[2026-06-19 17:22:43:2243] [INFO]: OPTIONS /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.106 ms
+[2026-06-19 17:22:43:2243] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 189.109 ms
+[2026-06-19 17:22:43:2243] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 147.360 ms
+[2026-06-19 17:22:43:2243] [INFO]: GET /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 369.271 ms
+[2026-06-19 17:22:43:2243] [INFO]: GET /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 213.700 ms
+[2026-06-19 17:22:50:2250] [INFO]: OPTIONS /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 204 0 - 0.178 ms
+[2026-06-19 17:22:50:2250] [INFO]: OPTIONS /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.122 ms
+[2026-06-19 17:22:50:2250] [INFO]: OPTIONS /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 204 0 - 0.161 ms
+[2026-06-19 17:22:50:2250] [INFO]: OPTIONS /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.179 ms
+[2026-06-19 17:22:50:2250] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 89.593 ms
+[2026-06-19 17:22:50:2250] [INFO]: GET /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 304 - - 235.164 ms
+[2026-06-19 17:22:50:2250] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 79.170 ms
+[2026-06-19 17:22:50:2250] [INFO]: GET /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 304 - - 148.648 ms
+[2026-06-19 17:22:51:2251] [INFO]: OPTIONS /api/users/all 204 0 - 0.647 ms
+[2026-06-19 17:22:51:2251] [INFO]: OPTIONS /api/products 204 0 - 0.197 ms
+[2026-06-19 17:22:51:2251] [INFO]: OPTIONS /api/users/all 204 0 - 0.131 ms
+[2026-06-19 17:22:51:2251] [INFO]: OPTIONS /api/products 204 0 - 0.202 ms
+[2026-06-19 17:22:51:2251] [INFO]: GET /api/products 304 - - 174.694 ms
+[2026-06-19 17:22:51:2251] [INFO]: GET /api/products 304 - - 93.065 ms
+[2026-06-19 17:22:52:2252] [INFO]: GET /api/users/all 304 - - 833.708 ms
+[2026-06-19 17:22:52:2252] [INFO]: GET /api/users/all 304 - - 333.133 ms
+[2026-06-19 17:22:55:2255] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: FXtJuLYDxdLW3PbUAAAS
+[2026-06-19 17:22:55:2255] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: x9GzOWAJZNQzvAU4AAAT
+[2026-06-19 17:22:56:2256] [INFO]: OPTIONS /api/products 204 0 - 0.130 ms
+[2026-06-19 17:22:56:2256] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: GcLY5oWwzdFvc9cxAAAW
+[2026-06-19 17:22:56:2256] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: fupWvM3iRWRhltUwAAAX
+[2026-06-19 17:22:56:2256] [INFO]: GET /api/products 304 - - 142.776 ms
+[2026-06-19 17:22:56:2256] [INFO]: OPTIONS /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 204 0 - 0.212 ms
+[2026-06-19 17:22:56:2256] [INFO]: OPTIONS /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.199 ms
+[2026-06-19 17:22:56:2256] [INFO]: OPTIONS /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.837 ms
+[2026-06-19 17:22:56:2256] [INFO]: GET /api/products 304 - - 86.869 ms
+[2026-06-19 17:22:56:2256] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 169.372 ms
+[2026-06-19 17:22:56:2256] [INFO]: GET /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 304 - - 137.844 ms
+[2026-06-19 17:22:56:2256] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 78.391 ms
+[2026-06-19 17:22:56:2256] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 64.178 ms
+[2026-06-19 17:22:57:2257] [INFO]: GET /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 304 - - 198.972 ms
+[2026-06-19 17:22:57:2257] [INFO]: GET /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 304 - - 177.363 ms
+[2026-06-19 17:22:59:2259] [INFO]: OPTIONS /api/users/all 204 0 - 0.122 ms
+[2026-06-19 17:22:59:2259] [INFO]: OPTIONS /api/users/all 204 0 - 0.084 ms
+[2026-06-19 17:22:59:2259] [INFO]: GET /api/products 304 - - 85.534 ms
+[2026-06-19 17:22:59:2259] [INFO]: GET /api/products 304 - - 79.661 ms
+[2026-06-19 17:22:59:2259] [INFO]: GET /api/users/all 304 - - 543.085 ms
+[2026-06-19 17:23:00:230] [INFO]: GET /api/users/all 304 - - 363.832 ms
+[2026-06-19 17:23:21:2321] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: R0943VuyG7TFl5TIAAAO
+[2026-06-19 17:23:21:2321] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: FbtJ6D8F6PWdNas2AAAP
+[2026-06-19 17:33:51:3351] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: GcLY5oWwzdFvc9cxAAAW
+[2026-06-19 17:33:51:3351] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: fupWvM3iRWRhltUwAAAX
+[2026-06-19 17:33:52:3352] [INFO]: OPTIONS /api/products 204 0 - 0.149 ms
+[2026-06-19 17:33:52:3352] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: 9qPCouyxU2yh2nrwAAAa
+[2026-06-19 17:33:52:3352] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: VbZWBt-FHM7xR7wfAAAb
+[2026-06-19 17:33:52:3352] [INFO]: GET /api/products 304 - - 565.084 ms
+[2026-06-19 17:33:52:3352] [INFO]: GET /api/products 304 - - 67.792 ms
+[2026-06-19 17:33:52:3352] [INFO]: OPTIONS /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 204 0 - 0.383 ms
+[2026-06-19 17:33:52:3352] [INFO]: OPTIONS /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.212 ms
+[2026-06-19 17:33:52:3352] [INFO]: OPTIONS /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.228 ms
+[2026-06-19 17:33:53:3353] [INFO]: GET /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 304 - - 239.295 ms
+[2026-06-19 17:33:53:3353] [INFO]: GET /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 304 - - 121.060 ms
+[2026-06-19 17:33:53:3353] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 379.820 ms
+[2026-06-19 17:33:53:3353] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 65.849 ms
+[2026-06-19 17:33:53:3353] [INFO]: GET /api/products/c188438d-8438-4278-88e0-6b1ee87aee76/status 304 - - 119.280 ms
+[2026-06-19 17:33:53:3353] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 63.767 ms
+[2026-06-19 17:33:54:3354] [INFO]: OPTIONS /api/user-stories?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.110 ms
+[2026-06-19 17:33:54:3354] [INFO]: OPTIONS /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.072 ms
+[2026-06-19 17:33:54:3354] [INFO]: OPTIONS /api/user-stories?productId=c188438d-8438-4278-88e0-6b1ee87aee76 204 0 - 0.077 ms
+[2026-06-19 17:33:55:3355] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 67.504 ms
+[2026-06-19 17:33:55:3355] [INFO]: GET /api/users?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 67.413 ms
+[2026-06-19 17:33:55:3355] [INFO]: GET /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 188.542 ms
+[2026-06-19 17:33:55:3355] [INFO]: GET /api/features?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 136.254 ms
+[2026-06-19 17:33:55:3355] [INFO]: GET /api/user-stories?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 477.120 ms
+[2026-06-19 17:33:55:3355] [INFO]: GET /api/user-stories?productId=c188438d-8438-4278-88e0-6b1ee87aee76 304 - - 122.421 ms
+[2026-06-19 17:33:58:3358] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.240 ms
+[2026-06-19 17:33:58:3358] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.189 ms
+[2026-06-19 17:33:58:3358] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.076 ms
+[2026-06-19 17:33:58:3358] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 349.158 ms
+[2026-06-19 17:33:58:3358] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 386.591 ms
+[2026-06-19 17:33:59:3359] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 618.335 ms
+[2026-06-19 17:34:05:345] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.188 ms
+[2026-06-19 17:34:05:345] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.087 ms
+[2026-06-19 17:34:05:345] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.205 ms
+[2026-06-19 17:34:05:345] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.138 ms
+[2026-06-19 17:34:05:345] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 392.026 ms
+[2026-06-19 17:34:05:345] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 441.312 ms
+[2026-06-19 17:34:05:345] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 133.705 ms
+[2026-06-19 17:34:06:346] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 286.634 ms
+[2026-06-19 17:34:09:349] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.144 ms
+[2026-06-19 17:34:09:349] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.075 ms
+[2026-06-19 17:34:09:349] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 371.929 ms
+[2026-06-19 17:34:09:349] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 77.171 ms
+[2026-06-19 17:34:09:349] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 491.045 ms
+[2026-06-19 17:34:09:349] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 579.478 ms
+[2026-06-19 17:34:09:349] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 236.339 ms
+[2026-06-19 17:34:10:3410] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 396.095 ms
+[2026-06-19 17:35:35:3535] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.186 ms
+[2026-06-19 17:35:36:3536] [INFO]: DELETE /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 200 52 - 321.769 ms
+[2026-06-19 17:35:36:3536] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.121 ms
+[2026-06-19 17:35:36:3536] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.089 ms
+[2026-06-19 17:35:36:3536] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 200 2 - 139.957 ms
+[2026-06-19 17:35:36:3536] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 372.553 ms
+[2026-06-19 17:35:36:3536] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 495.537 ms
+[2026-06-19 17:35:53:3553] [INFO]: OPTIONS /api/user-stories/bulk 204 0 - 0.162 ms
+[2026-06-19 17:35:54:3554] [INFO]: [NOTIFICATION SERVICE] Creating notification for user de8d0345-d3af-4f54-82ff-4ec269040688: "User Story Assigned via Import"
+[2026-06-19 17:35:55:3555] [INFO]: [SOCKET] Emitting event "notification" to user room de8d0345-d3af-4f54-82ff-4ec269040688
+[2026-06-19 17:35:55:3555] [INFO]: [NOTIFICATION SERVICE] Creating notification for user de8d0345-d3af-4f54-82ff-4ec269040688: "User Story Assigned via Import"
+[2026-06-19 17:35:55:3555] [INFO]: [SOCKET] Emitting event "notification" to user room de8d0345-d3af-4f54-82ff-4ec269040688
+[2026-06-19 17:35:55:3555] [INFO]: [NOTIFICATION SERVICE] Creating notification for user de8d0345-d3af-4f54-82ff-4ec269040688: "User Story Assigned via Import"
+[2026-06-19 17:35:56:3556] [INFO]: [SOCKET] Emitting event "notification" to user room de8d0345-d3af-4f54-82ff-4ec269040688
+[2026-06-19 17:35:56:3556] [INFO]: [NOTIFICATION SERVICE] Creating notification for user de8d0345-d3af-4f54-82ff-4ec269040688: "User Story Assigned via Import"
+[2026-06-19 17:35:56:3556] [INFO]: [SOCKET] Emitting event "notification" to user room de8d0345-d3af-4f54-82ff-4ec269040688
+[2026-06-19 17:35:57:3557] [INFO]: [NOTIFICATION SERVICE] Creating notification for user de8d0345-d3af-4f54-82ff-4ec269040688: "User Story Assigned via Import"
+[2026-06-19 17:35:57:3557] [INFO]: [SOCKET] Emitting event "notification" to user room de8d0345-d3af-4f54-82ff-4ec269040688
+[2026-06-19 17:35:57:3557] [INFO]: [NOTIFICATION SERVICE] Creating notification for user de8d0345-d3af-4f54-82ff-4ec269040688: "User Story Assigned via Import"
+[2026-06-19 17:35:58:3558] [INFO]: [SOCKET] Emitting event "notification" to user room de8d0345-d3af-4f54-82ff-4ec269040688
+[2026-06-19 17:35:58:3558] [INFO]: [NOTIFICATION SERVICE] Creating notification for user de8d0345-d3af-4f54-82ff-4ec269040688: "User Story Assigned via Import"
+[2026-06-19 17:35:58:3558] [INFO]: [SOCKET] Emitting event "notification" to user room de8d0345-d3af-4f54-82ff-4ec269040688
+[2026-06-19 17:35:58:3558] [INFO]: [NOTIFICATION SERVICE] Creating notification for user de8d0345-d3af-4f54-82ff-4ec269040688: "User Story Assigned via Import"
+[2026-06-19 17:35:59:3559] [INFO]: [SOCKET] Emitting event "notification" to user room de8d0345-d3af-4f54-82ff-4ec269040688
+[2026-06-19 17:35:59:3559] [ERROR]: POST /api/user-stories/bulk - Error: 
+Invalid `prisma.userStory.create()` invocation:
+
+
+Transaction API error: Transaction already closed: A query cannot be executed on an expired transaction. The timeout for this transaction was 5000 ms, however 5261 ms passed since the start of the transaction. Consider increasing the interactive transaction timeout or doing less work in the transaction.
+[2026-06-19 17:35:59:3559] [ERROR]: PrismaClientKnownRequestError: 
+Invalid `prisma.userStory.create()` invocation:
+
+
+Transaction API error: Transaction already closed: A query cannot be executed on an expired transaction. The timeout for this transaction was 5000 ms, however 5261 ms passed since the start of the transaction. Consider increasing the interactive transaction timeout or doing less work in the transaction.
+    at $n.handleRequestError (C:\Users\krish\OneDrive\Desktop\TKS Project Tracking\backend\node_modules\@prisma\client\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\krish\OneDrive\Desktop\TKS Project Tracking\backend\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (C:\Users\krish\OneDrive\Desktop\TKS Project Tracking\backend\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (C:\Users\krish\OneDrive\Desktop\TKS Project Tracking\backend\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at async file:///C:/Users/krish/OneDrive/Desktop/TKS%20Project%20Tracking/backend/src/routes/userStories.js:141:26
+    at async Proxy._transactionWithCallback (C:\Users\krish\OneDrive\Desktop\TKS Project Tracking\backend\node_modules\@prisma\client\runtime\library.js:130:8000)
+    at async file:///C:/Users/krish/OneDrive/Desktop/TKS%20Project%20Tracking/backend/src/routes/userStories.js:130:5
+[2026-06-19 17:35:59:3559] [INFO]: POST /api/user-stories/bulk 500 389 - 5600.394 ms
+[2026-06-19 17:36:11:3611] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.232 ms
+[2026-06-19 17:36:11:3611] [INFO]: DELETE /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 200 52 - 253.040 ms
+[2026-06-19 17:36:11:3611] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.318 ms
+[2026-06-19 17:36:11:3611] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.986 ms
+[2026-06-19 17:36:11:3611] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 200 2 - 135.624 ms
+[2026-06-19 17:36:12:3612] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 370.618 ms
+[2026-06-19 17:36:12:3612] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 548.206 ms
+[2026-06-19 17:37:38:3738] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.363 ms
+[2026-06-19 17:37:38:3738] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.153 ms
+[2026-06-19 17:37:38:3738] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.123 ms
+[2026-06-19 17:37:38:3738] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.116 ms
+[2026-06-19 17:37:38:3738] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 344.866 ms
+[2026-06-19 17:37:38:3738] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 349.588 ms
+[2026-06-19 17:37:38:3738] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 186.390 ms
+[2026-06-19 17:37:38:3738] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 289.608 ms
+[2026-06-19 17:37:39:3739] [INFO]: OPTIONS /api/users/all 204 0 - 0.112 ms
+[2026-06-19 17:37:39:3739] [INFO]: OPTIONS /api/products 204 0 - 0.102 ms
+[2026-06-19 17:37:39:3739] [INFO]: OPTIONS /api/users/all 204 0 - 0.073 ms
+[2026-06-19 17:37:39:3739] [INFO]: OPTIONS /api/products 204 0 - 0.091 ms
+[2026-06-19 17:37:39:3739] [INFO]: GET /api/products 304 - - 61.865 ms
+[2026-06-19 17:37:39:3739] [INFO]: GET /api/products 304 - - 60.085 ms
+[2026-06-19 17:37:40:3740] [INFO]: GET /api/users/all 200 234291 - 728.558 ms
+[2026-06-19 17:37:40:3740] [INFO]: GET /api/users/all 304 - - 290.268 ms
+[2026-06-19 17:37:58:3758] [INFO]: OPTIONS /api/requirements-mapping?projectId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.160 ms
+[2026-06-19 17:37:58:3758] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.075 ms
+[2026-06-19 17:37:58:3758] [INFO]: OPTIONS /api/functional-requirements?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.166 ms
+[2026-06-19 17:37:58:3758] [INFO]: OPTIONS /api/requirements-mapping?projectId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.366 ms
+[2026-06-19 17:37:58:3758] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.069 ms
+[2026-06-19 17:37:58:3758] [INFO]: OPTIONS /api/functional-requirements?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.084 ms
+[2026-06-19 17:37:58:3758] [INFO]: GET /api/functional-requirements?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 175.525 ms
+[2026-06-19 17:37:58:3758] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 179.278 ms
+[2026-06-19 17:37:58:3758] [INFO]: GET /api/requirements-mapping?projectId=83281d32-b29d-41e1-8a24-1d9947920146 200 2 - 182.936 ms
+[2026-06-19 17:37:58:3758] [INFO]: GET /api/functional-requirements?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 144.739 ms
+[2026-06-19 17:37:58:3758] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 138.889 ms
+[2026-06-19 17:37:58:3758] [INFO]: GET /api/requirements-mapping?projectId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 192.441 ms
+[2026-06-19 17:37:59:3759] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.099 ms
+[2026-06-19 17:37:59:3759] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.065 ms
+[2026-06-19 17:37:59:3759] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.065 ms
+[2026-06-19 17:37:59:3759] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.068 ms
+[2026-06-19 17:37:59:3759] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 324.254 ms
+[2026-06-19 17:37:59:3759] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 418.288 ms
+[2026-06-19 17:37:59:3759] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 139.128 ms
+[2026-06-19 17:37:59:3759] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.106 ms
+[2026-06-19 17:37:59:3759] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.077 ms
+[2026-06-19 17:37:59:3759] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 73.526 ms
+[2026-06-19 17:38:00:380] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 151.278 ms
+[2026-06-19 17:38:00:380] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 252.833 ms
+[2026-06-19 17:38:00:380] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 385.319 ms
+[2026-06-19 17:38:00:380] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 203.745 ms
+[2026-06-19 17:38:04:384] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 282.048 ms
+[2026-06-19 17:38:04:384] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 73.182 ms
+[2026-06-19 17:38:04:384] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 401.671 ms
+[2026-06-19 17:38:04:384] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 214.937 ms
+[2026-06-19 17:38:13:3813] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.130 ms
+[2026-06-19 17:38:13:3813] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.091 ms
+[2026-06-19 17:38:13:3813] [INFO]: OPTIONS /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 204 0 - 0.110 ms
+[2026-06-19 17:38:13:3813] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.104 ms
+[2026-06-19 17:38:13:3813] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 191.778 ms
+[2026-06-19 17:38:13:3813] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 297.904 ms
+[2026-06-19 17:38:13:3813] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 155.384 ms
+[2026-06-19 17:38:13:3813] [INFO]: GET /api/products/83281d32-b29d-41e1-8a24-1d9947920146/status 304 - - 266.447 ms
+[2026-06-19 17:38:31:3831] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.281 ms
+[2026-06-19 17:38:31:3831] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.115 ms
+[2026-06-19 17:38:31:3831] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.140 ms
+[2026-06-19 17:38:31:3831] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.173 ms
+[2026-06-19 17:38:32:3832] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 348.724 ms
+[2026-06-19 17:38:32:3832] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 494.735 ms
+[2026-06-19 17:38:32:3832] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 148.559 ms
+[2026-06-19 17:38:32:3832] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 212.704 ms
+[2026-06-19 17:39:00:390] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.291 ms
+[2026-06-19 17:39:00:390] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.156 ms
+[2026-06-19 17:39:00:390] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.089 ms
+[2026-06-19 17:39:00:390] [INFO]: OPTIONS /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.602 ms
+[2026-06-19 17:39:00:390] [INFO]: OPTIONS /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.229 ms
+[2026-06-19 17:39:00:390] [INFO]: OPTIONS /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 204 0 - 0.112 ms
+[2026-06-19 17:39:01:391] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 718.981 ms
+[2026-06-19 17:39:01:391] [INFO]: GET /api/user-stories?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 130.104 ms
+[2026-06-19 17:39:01:391] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 871.152 ms
+[2026-06-19 17:39:01:391] [INFO]: GET /api/users?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 74.976 ms
+[2026-06-19 17:39:01:391] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 1076.369 ms
+[2026-06-19 17:39:02:392] [INFO]: GET /api/features?productId=83281d32-b29d-41e1-8a24-1d9947920146 304 - - 237.307 ms
+[2026-06-19 17:57:28:5728] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: VbZWBt-FHM7xR7wfAAAb
+[2026-06-19 17:57:28:5728] [INFO]: [SOCKET] User disconnected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: 9qPCouyxU2yh2nrwAAAa
+[2026-06-19 18:03:40:340] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: ghsBI6VHM1lmumGQAAAe
+[2026-06-19 18:03:40:340] [INFO]: [SOCKET] User connected: Krishna Shelar (de8d0345-d3af-4f54-82ff-4ec269040688) - Socket: sjBTuV9cDbLegaAhAAAf

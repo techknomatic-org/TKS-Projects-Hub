@@ -5,6 +5,8 @@ import { saveAs } from 'file-saver';
 import { productService } from '../services/productService.js';
 import UserStoryFilters from './UserStoryFilters.jsx';
 import UserStoryTable from './UserStoryTable.jsx';
+import UserStoryModal from './UserStoryModal.jsx';
+import DeleteConfirmationModal from './DeleteConfirmationModal.jsx';
 
 export const UserStoryList = ({ selectedProduct, userRole }) => {
   const [userStories, setUserStories] = useState([]);
@@ -21,19 +23,29 @@ export const UserStoryList = ({ selectedProduct, userRole }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
+  // Edit / Delete / Add State
+  const [features, setFeatures] = useState([]);
+  const [selectedStory, setSelectedStory] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDeleteOpen, setIsDeleteOpen] = useState(false);
+  const [storyToDelete, setStoryToDelete] = useState(null);
+
   const canImportExcel = userRole === 'ADMIN' || userRole === 'BOTH';
+  const canAddStory = userRole === 'EMPLOYEE' || userRole === 'BOTH';
 
   // Fetch stories and employees
   const fetchData = async () => {
     if (!selectedProduct) return;
     setLoading(true);
     try {
-      const [storiesData, employeesData] = await Promise.all([
+      const [storiesData, employeesData, featuresData] = await Promise.all([
         productService.getUserStories(selectedProduct.id),
-        productService.getEmployees(selectedProduct.id)
+        productService.getEmployees(selectedProduct.id),
+        productService.getFeatures(selectedProduct.id)
       ]);
       setUserStories(storiesData);
       setEmployees(employeesData);
+      setFeatures(featuresData);
     } catch (error) {
       console.error('Failed to load user stories panel data:', error);
     } finally {
@@ -215,6 +227,55 @@ export const UserStoryList = ({ selectedProduct, userRole }) => {
     }
   };
 
+  const handleEditStory = (story) => {
+    setSelectedStory(story);
+    setIsModalOpen(true);
+  };
+
+  const handleDeleteStoryClick = (storyId) => {
+    setStoryToDelete(storyId);
+    setIsDeleteOpen(true);
+  };
+
+  const handleSaveStory = async (payload, isNew) => {
+    try {
+      setLoading(true);
+      if (isNew) {
+        await productService.createUserStory({
+          ...payload,
+          productId: selectedProduct.id
+        });
+        alert('User Story created successfully!');
+      } else {
+        await productService.updateUserStory(selectedStory.id, payload);
+        alert('User Story updated successfully!');
+      }
+      await fetchData();
+    } catch (error) {
+      console.error('Failed to save user story:', error);
+      alert('Failed to save user story changes: ' + error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleConfirmDelete = async () => {
+    if (!storyToDelete) return;
+    try {
+      setLoading(true);
+      await productService.deleteUserStory(storyToDelete);
+      alert('User Story deleted successfully!');
+      setIsDeleteOpen(false);
+      setStoryToDelete(null);
+      await fetchData();
+    } catch (error) {
+      console.error('Failed to delete user story:', error);
+      alert('Failed to delete user story: ' + error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="flex-1 flex flex-col gap-6 p-6 md:p-8 overflow-y-auto animate-in fade-in duration-200">
       {/* Header Row */}
@@ -227,6 +288,19 @@ export const UserStoryList = ({ selectedProduct, userRole }) => {
         </div>
 
         <div className="flex items-center gap-3 self-end sm:self-auto">
+          {/* Add User Story Button (Employees/Both only) */}
+          {canAddStory && (
+            <button
+              onClick={() => {
+                setSelectedStory({ id: 'new' });
+                setIsModalOpen(true);
+              }}
+              className="flex items-center gap-1.5 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold shadow-lg shadow-blue-600/10 hover:shadow-blue-600/20 transition-all cursor-pointer"
+            >
+              Add User Story
+            </button>
+          )}
+
           {/* Import Excel Button (Admins only) */}
           {canImportExcel && (
             <div className="flex items-center gap-2">
@@ -279,6 +353,9 @@ export const UserStoryList = ({ selectedProduct, userRole }) => {
         stories={currentItems}
         loading={loading}
         indexOffset={indexOfFirstItem}
+        isAdmin={userRole === 'ADMIN'}
+        onEdit={handleEditStory}
+        onDelete={handleDeleteStoryClick}
       />
 
       {/* Pagination indicators */}
@@ -325,6 +402,31 @@ export const UserStoryList = ({ selectedProduct, userRole }) => {
           </div>
         </div>
       )}
+
+      {/* User Story Modals */}
+      <UserStoryModal
+        story={selectedStory}
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setSelectedStory(null);
+        }}
+        onSave={handleSaveStory}
+        features={features}
+        employees={employees}
+        isAdmin={userRole === 'ADMIN'}
+      />
+
+      <DeleteConfirmationModal
+        isOpen={isDeleteOpen}
+        onClose={() => {
+          setIsDeleteOpen(false);
+          setStoryToDelete(null);
+        }}
+        onConfirm={handleConfirmDelete}
+        title="Delete User Story"
+        message="Are you sure you want to delete this user story? This action cannot be undone."
+      />
     </div>
   );
 };
