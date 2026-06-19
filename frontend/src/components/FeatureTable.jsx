@@ -36,7 +36,7 @@ export const FeatureTable = ({
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="bg-slate-50 border-b border-slate-100 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-              {['ID', 'Feature Name', 'Priority', 'Status', 'Owner', 'Release', 'Created Date', 'Actions'].map((h, i) => (
+              {['ID', 'Feature Name', 'Priority', 'Status', 'Owner', 'Actions'].map((h, i) => (
                 <th key={i} className="py-4 px-6">{h}</th>
               ))}
             </tr>
@@ -57,8 +57,6 @@ export const FeatureTable = ({
                     <div className="h-3.5 w-16 bg-slate-100 rounded animate-pulse" />
                   </div>
                 </td>
-                <td className="py-4 px-6"><div className="h-4 w-12 bg-slate-100 rounded animate-pulse" /></td>
-                <td className="py-4 px-6"><div className="h-4 w-20 bg-slate-100 rounded animate-pulse" /></td>
                 <td className="py-4 px-6">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-lg bg-slate-100 animate-pulse" />
@@ -92,8 +90,7 @@ export const FeatureTable = ({
               <th className="py-4 px-6 w-28">Priority</th>
               <th className="py-4 px-6 w-32">Status</th>
               <th className="py-4 px-6">Owner</th>
-              <th className="py-4 px-6 w-28">Release</th>
-              <th className="py-4 px-6 w-32">Created Date</th>
+              <th className="py-4 px-6 w-24">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -143,20 +140,26 @@ export const FeatureTable = ({
                   )}
                 </td>
 
-                {/* Release Version */}
-                <td className="py-4 px-6">
-                  {feature.releaseVersion ? (
-                    <span className="px-2 py-0.5 bg-slate-50 border border-slate-100 rounded text-slate-600 text-xs font-bold font-mono">
-                      {feature.releaseVersion}
-                    </span>
-                  ) : (
-                    <span className="text-slate-400 text-xs font-medium">-</span>
-                  )}
-                </td>
-
-                {/* Created Date */}
-                <td className="py-4 px-6 text-xs font-semibold text-slate-500">
-                  {formatDate(feature.createdAt)}
+                {/* Actions */}
+                <td className="py-4 px-6 whitespace-nowrap">
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => onEdit(feature)}
+                      className="p-1.5 hover:bg-slate-100 rounded-lg text-slate-500 hover:text-slate-700 transition-all cursor-pointer"
+                      title={isAdmin ? "View Feature Details" : "Edit Feature"}
+                    >
+                      {isAdmin ? <Eye className="w-4 h-4" /> : <Edit2 className="w-4 h-4" />}
+                    </button>
+                    {!isAdmin && (
+                      <button
+                        onClick={() => onDelete(feature.id)}
+                        className="p-1.5 hover:bg-red-50 rounded-lg text-red-500 hover:text-red-700 transition-all cursor-pointer"
+                        title="Delete Feature"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                    )}
+                  </div>
                 </td>
               </tr>
             ))}

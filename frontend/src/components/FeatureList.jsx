@@ -5,6 +5,8 @@ import { saveAs } from 'file-saver';
 import { productService } from '../services/productService.js';
 import FeatureFilters from './FeatureFilters.jsx';
 import FeatureTable from './FeatureTable.jsx';
+import FeatureModal from './FeatureModal.jsx';
+import DeleteConfirmationModal from './DeleteConfirmationModal.jsx';
 
 export const FeatureList = ({ selectedProduct, userRole }) => {
   const [features, setFeatures] = useState([]);
@@ -21,7 +23,14 @@ export const FeatureList = ({ selectedProduct, userRole }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
+  // Edit / Delete State
+  const [selectedFeature, setSelectedFeature] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDeleteOpen, setIsDeleteOpen] = useState(false);
+  const [featureToDelete, setFeatureToDelete] = useState(null);
+
   const canImportExcel = userRole === 'ADMIN' || userRole === 'BOTH';
+  const canAddFeature = userRole === 'EMPLOYEE' || userRole === 'BOTH';
 
   // Fetch features and employees
   const fetchData = async () => {
@@ -219,6 +228,55 @@ export const FeatureList = ({ selectedProduct, userRole }) => {
     }
   };
 
+  const handleEditFeature = (feature) => {
+    setSelectedFeature(feature);
+    setIsModalOpen(true);
+  };
+
+  const handleDeleteFeatureClick = (featureId) => {
+    setFeatureToDelete(featureId);
+    setIsDeleteOpen(true);
+  };
+
+  const handleSaveFeature = async (payload, isNew) => {
+    try {
+      setLoading(true);
+      if (isNew) {
+        await productService.createFeature({
+          ...payload,
+          productId: selectedProduct.id
+        });
+        alert('Feature created successfully!');
+      } else {
+        await productService.updateFeature(selectedFeature.id, payload);
+        alert('Feature updated successfully!');
+      }
+      await fetchData();
+    } catch (error) {
+      console.error('Failed to save feature details:', error);
+      alert('Failed to save feature changes: ' + error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleConfirmDelete = async () => {
+    if (!featureToDelete) return;
+    try {
+      setLoading(true);
+      await productService.deleteFeature(featureToDelete);
+      alert('Feature deleted successfully!');
+      setIsDeleteOpen(false);
+      setFeatureToDelete(null);
+      await fetchData();
+    } catch (error) {
+      console.error('Failed to delete feature:', error);
+      alert('Failed to delete feature: ' + error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="flex-1 flex flex-col gap-6 p-6 md:p-8 overflow-y-auto">
       {/* Upper header action row */}
@@ -231,6 +289,19 @@ export const FeatureList = ({ selectedProduct, userRole }) => {
         </div>
 
         <div className="flex items-center gap-3 self-end sm:self-auto">
+          {/* Add Feature Button (Employees/Both only) */}
+          {canAddFeature && (
+            <button
+              onClick={() => {
+                setSelectedFeature({ id: 'new' });
+                setIsModalOpen(true);
+              }}
+              className="flex items-center gap-1.5 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold shadow-lg shadow-blue-600/10 hover:shadow-blue-600/20 transition-all cursor-pointer"
+            >
+              Add Feature
+            </button>
+          )}
+
           {/* Import Excel Button (Admins only) */}
           {canImportExcel && (
             <div className="flex items-center gap-2">
@@ -283,6 +354,9 @@ export const FeatureList = ({ selectedProduct, userRole }) => {
         features={currentItems}
         loading={loading}
         indexOffset={indexOfFirstItem}
+        isAdmin={userRole === 'ADMIN'}
+        onEdit={handleEditFeature}
+        onDelete={handleDeleteFeatureClick}
       />
 
       {/* Pagination Controls */}
@@ -329,6 +403,28 @@ export const FeatureList = ({ selectedProduct, userRole }) => {
           </div>
         </div>
       )}
+
+      {/* Feature Modals */}
+      <FeatureModal
+        feature={selectedFeature}
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setSelectedFeature(null);
+        }}
+        onSave={handleSaveFeature}
+        employees={employees}
+        isAdmin={userRole === 'ADMIN'}
+      />
+
+      <DeleteConfirmationModal
+        isOpen={isDeleteOpen}
+        onClose={() => {
+          setIsDeleteOpen(false);
+          setFeatureToDelete(null);
+        }}
+        onConfirm={handleConfirmDelete}
+      />
     </div>
   );
 };
